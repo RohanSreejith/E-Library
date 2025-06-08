@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favourites | E-Library Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/darkmode.css" id="darkmode-style" disabled>
+    <link rel="icon" href="assets/images/logo.png">
+</head>
+<body>
+    <header>
+        <img src="assets/images/logo.png" alt="E-Library Logo" class="logo">
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="favourites.html" class="nav-link active">Favourites</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+            <button id="toggle-darkmode" title="Toggle Dark Mode">🌙</button>
+            <a href="login.html" id="login-btn" class="nav-link">Login</a>
+        </nav>
+    </header>
+    <main>
+        <section class="favourites-section">
+            <h2>Your Favourite Books</h2>
+            <div id="favourites-list" class="books-list">
+                <!-- Favourite book cards rendered here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 E-Library Dashboard. All rights reserved.</p>
+    </footer>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/favourites.js"></script>
+</body>
+</html>
