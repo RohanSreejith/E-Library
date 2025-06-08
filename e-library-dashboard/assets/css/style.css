@@ -1,0 +1,260 @@
+:root {
+    --primary: #3166d3;
+    --secondary: #f3f4f6;
+    --accent: #ffe082;
+    --text: #222;
+    --bg: #fff;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+    --radius: 8px;
+    --transition: 0.2s cubic-bezier(.4,0,.2,1);
+}
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    background: var(--secondary);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    padding: 0.5em 2em;
+    justify-content: space-between;
+}
+.logo {
+    height: 40px;
+    margin-right: 1.5em;
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.nav-link {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 500;
+    padding: 0.4em 1em;
+    border-radius: var(--radius);
+    transition: background var(--transition);
+}
+.nav-link.active,
+.nav-link:hover {
+    background: var(--accent);
+    color: #222;
+}
+#toggle-darkmode {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    margin-left: 1em;
+    cursor: pointer;
+    transition: color var(--transition);
+}
+main {
+    flex: 1;
+    padding: 2em 4vw 1em 4vw;
+}
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+#search-bar {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.7em 1em;
+    border: 1px solid #ddd;
+    border-radius: var(--radius);
+    font-size: 1em;
+}
+.filters-section {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+}
+.filters-section label {
+    margin-right: 0.5em;
+    font-weight: 500;
+}
+.filters-section select {
+    padding: 0.4em 0.8em;
+    border-radius: var(--radius);
+    border: 1px solid #ccc;
+}
+.books-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 2em;
+    margin-bottom: 2em;
+}
+.book-card {
+    background: var(--secondary);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 340px;
+}
+.book-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 28px rgba(49,102,211,0.11);
+}
+.book-cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: #e3e3e3;
+}
+.book-info {
+    padding: 1em;
+    flex: 1;
+}
+.book-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0.3em;
+}
+.book-author {
+    color: #5c5c5c;
+    font-size: 0.97em;
+    margin-bottom: 0.5em;
+}
+.book-desc {
+    color: #444;
+    font-size: 0.97em;
+    margin-bottom: 0.4em;
+    height: 2.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.book-actions {
+    display: flex;
+    gap: 0.4em;
+    margin-top: auto;
+}
+.fav-btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fav-btn.favourited,
+.fav-btn:hover {
+    background: #ff4d6d;
+}
+footer {
+    background: var(--secondary);
+    padding: 1em 0;
+    text-align: center;
+    font-size: 0.96em;
+    color: #7d7d7d;
+    box-shadow: var(--shadow);
+}
+.login-container, .profile-container, .favourites-section, .book-details-section {
+    max-width: 410px;
+    margin: 2.5em auto 0 auto;
+    background: var(--secondary);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2.5em 2em;
+    text-align: center;
+}
+.login-container h2, .favourites-section h2 {
+    margin-bottom: 1.2em;
+}
+.form-group {
+    margin-bottom: 1.1em;
+    text-align: left;
+}
+.form-group label {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+    display: block;
+}
+.form-group input {
+    width: 100%;
+    padding: 0.7em;
+    border-radius: var(--radius);
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+.btn {
+    background: var(--primary);
+    color: #fff;
+    padding: 0.7em 2.2em;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+.btn:hover {
+    background: #294fa6;
+}
+.error-message {
+    color: #b00020;
+    font-size: 0.95em;
+    margin-top: 0.6em;
+}
+.profile-avatar {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    margin-bottom: 1.2em;
+    border: 3px solid var(--primary);
+    background: #eee;
+}
+.profile-container h2 {
+    margin-bottom: 0.2em;
+}
+.profile-container p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 1.6em;
+}
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+}
+.profile-stats div {
+    text-align: center;
+}
+.profile-stats span {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--primary);
+}
+@media (max-width: 650px) {
+    main {
+        padding: 1.2em 1vw;
+    }
+    .filters-section {
+        flex-direction: column;
+        gap: 1em;
+        align-items: flex-start;
+    }
+    .login-container, .profile-container, .favourites-section, .book-details-section {
+        padding: 2em 0.7em;
+    }
+}
