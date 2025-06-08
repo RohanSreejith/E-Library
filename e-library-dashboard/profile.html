@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile | E-Library Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/darkmode.css" id="darkmode-style" disabled>
+    <link rel="icon" href="assets/images/logo.png">
+</head>
+<body>
+    <header>
+        <img src="assets/images/logo.png" alt="E-Library Logo" class="logo">
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="favourites.html" class="nav-link">Favourites</a>
+            <a href="profile.html" class="nav-link active">Profile</a>
+            <button id="toggle-darkmode" title="Toggle Dark Mode">🌙</button>
+            <a href="login.html" id="logout-btn" class="nav-link">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <section class="profile-container">
+            <img src="assets/images/user-default.png" alt="User Avatar" id="profile-avatar" class="profile-avatar">
+            <h2 id="profile-username">User</h2>
+            <p id="profile-email">user@elibrary.com</p>
+            <div class="profile-stats">
+                <div>
+                    <span id="total-books">0</span>
+                    <p>Books in Favourites</p>
+                </div>
+                <div>
+                    <span id="last-login">-</span>
+                    <p>Last Login</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 E-Library Dashboard. All rights reserved.</p>
+    </footer>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>
