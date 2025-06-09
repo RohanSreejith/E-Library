@@ -1,0 +1,50 @@
+body {
+    --primary: #90caf9;
+    --secondary: #1a2233;
+    --accent: #ffb300;
+    --text: #e3e7ef;
+    --bg: #101624;
+    --shadow: 0 2px 20px rgba(0,0,0,0.22);
+}
+header, footer {
+    background: var(--secondary);
+    color: var(--text);
+}
+main, .login-container, .profile-container, .favourites-section, .book-details-section {
+    background: var(--bg);
+    color: var(--text);
+}
+.nav-link {
+    color: var(--primary);
+}
+.nav-link.active, .nav-link:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
+#search-bar, .form-group input, .filters-section select {
+    background: #131a2a;
+    color: var(--text);
+    border-color: #33405b;
+}
+.book-card {
+    background: #162040;
+    color: var(--text);
+}
+.book-card:hover {
+    box-shadow: 0 8px 32px rgba(144,202,249,0.08);
+}
+.fav-btn {
+    background: #33405b;
+    color: var(--accent);
+}
+.fav-btn.favourited, .fav-btn:hover {
+    background: #ff1744;
+    color: #fff;
+}
+.error-message {
+    color: #ff8a65;
+}
+.profile-avatar {
+    border-color: var(--accent);
+    background: #233057;
+}
